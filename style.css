@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0a0a0a;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  touch-action: none;
+}
+#container {
+  position: relative;
+}
+#sunflower {
+  display: block;
+}
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 2rem;
+  color: #ff4c4c;
+  text-align: center;
+  pointer-events: none;
+  line-height: 1.5;
+  text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+  animation: flicker 2s infinite alternate;
+}
+@keyframes flicker {
+  0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; transform: translate(-50%, -50%) scale(0.98); }
+  50% { text-shadow: 0 0 25px #ff4500, 0 0 50px #ff4500; transform: translate(-50%, -50%) scale(1.02); }
+  100% { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; transform: translate(-50%, -50%) scale(1); }
+}
+#addSunflower {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #ff0000;
+}
